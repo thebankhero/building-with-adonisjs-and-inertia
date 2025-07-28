@@ -48,3 +48,8 @@ npx shadcn-vue@radix init
 ```code
 npx shadcn-vue@radix add button
 ```
+
+## Middleware
+```code
+node ace make:middleware share_example
+```
