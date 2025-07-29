@@ -21,3 +21,7 @@ router.get('/register', async (ctx) => {
 router.get('/login', async (ctx) => {
   return ctx.inertia.render('auth/login')
 })
+
+router.post('/register', async (ctx) => {
+  return ctx.response.redirect().back()
+})
