@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { router } from '@inertiajs/vue3';
+import AuthLayout from '~/layouts/AuthLayout.vue';
+
+defineOptions({ layout: AuthLayout })
 
 defineProps<{
   renderCount: number,

@@ -1,7 +1,7 @@
 import { createInertiaApp, Link } from '@inertiajs/vue3'
 import { renderToString } from '@vue/server-renderer'
 import { createSSRApp, h, type DefineComponent } from 'vue'
-import AuthLayout from '~/layouts/AuthLayout.vue'
+import AppLayout from '~/layouts/AppLayout.vue'
 
 export default function render(page: any) {
   return createInertiaApp({
@@ -9,11 +9,11 @@ export default function render(page: any) {
     render: renderToString,
     resolve: (name) => {
       const pages = import.meta.glob<DefineComponent>('../pages/**/*.vue', { eager: true })
-      const resolvedPaged = pages[`../pages/${name}.vue`]
+      const resolvedPage = pages[`../pages/${name}.vue`]
 
-      resolvedPaged.default.layout = AuthLayout
+      resolvedPage.default.layout = resolvedPage.default.layout || AppLayout
 
-      return resolvedPaged
+      return resolvedPage
     },
 
     setup({ App, props, plugin }) {
