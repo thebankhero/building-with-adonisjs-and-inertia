@@ -47,6 +47,7 @@ npx shadcn-vue@radix init
 ### Shadcn-Vue Components
 ```code
 npx shadcn-vue@radix add button
+npx shadcn-vue@radix add input label
 ```
 
 ## Middleware
