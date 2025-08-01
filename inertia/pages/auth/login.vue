@@ -13,6 +13,7 @@ defineProps<{
 </script>
 
 <template>
+  <AppHead title="Login" description="Login to your PlotMyCourse account" />
 
   <div class="flex flex-col space-y-2">
     <h1 class="text-2xl font-semibold tracking-tight">Login</h1>
